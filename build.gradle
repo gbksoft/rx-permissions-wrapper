@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    suppotVersion = '25.1.1'
+    rxBindingsVersion = '0.4.0'
+    rxPermissionsVersion = '0.9.1@aar'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$suppotVersion"
+    compile "com.android.support:design:$suppotVersion"
+    compile "com.jakewharton.rxbinding:rxbinding:$rxBindingsVersion"
+    compile "com.jakewharton.rxbinding:rxbinding-appcompat-v7:$rxBindingsVersion"
+    compile "com.tbruyelle.rxpermissions:rxpermissions:$rxPermissionsVersion"
+}

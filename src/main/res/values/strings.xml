@@ -1,0 +1,8 @@
+<resources>
+    <string name="gbkrxwb_app_name">RxPermissionsWrapper</string>
+    <string name="gbkrxwb_permission_request">Permission request</string>
+    <string name="gbkrxwb_deny">Deny</string>
+    <string name="gbkrxwb_allow">Allow</string>
+    <string name="gbkrxwb_ok">Ok</string>
+    <string name="gbkrxwb_settings">Settings</string>
+</resources>
